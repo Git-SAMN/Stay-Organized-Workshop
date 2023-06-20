@@ -60,20 +60,19 @@
     <h1>New ToDo Task</h1>
     <div class="card">
       <div class="card-body">
-        <form id="todoForm" action="submit_todo.php" method="POST">
+        <form id="todoForm">
           <div class="form-group">
             <label for="user">User:</label>
             <select class="form-control" id="user" name="user" required>
-              <option value="1">John</option>
-              <option value="2">Jane</option>
-              <option value="3">Alex</option>
+              <option value="-1">Please Select A User</option>
+         
             </select>
           </div>
           
           <div class="form-group">
             <label for="category">Category:</label>
             <select class="form-control" id="category" name="category" required>
-              <!-- Options will be dynamically populated via JavaScript -->
+              <option value="-1">Please Select A Task</option>
             </select>
           </div>
 
@@ -96,7 +95,7 @@
             </select>
           </div>
 
-          <button type="submit" class="btn btn-primary">Add Task</button>
+          <button type="submit" class="btn btn-primary" id="addBtn">Add Task</button>
         </form>
       </div>
     </div>
