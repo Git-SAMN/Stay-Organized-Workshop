@@ -1,10 +1,11 @@
 "use strict";
 
+const addBtn = document.getElementById("addBtn");
 
 
 
 window.onload = () => {
-    addBrn.onclick = onAddBtnClicked;
+    addBtn.onclick = onAddBtnClicked;
 
     populateCategoryDrop();
     populateUrgencyDrop();
@@ -16,17 +17,17 @@ window.onload = () => {
 //calls the api to display user names
 function populateUserDrop() {
     fetch("http://localhost:8083/api/users")
-        .then(response = response.json())
+        .then(response => response.json())
         .then(userName => {
-            console.log(userName.name);
+            console.log(userName);
         })
 }
 //calls the api to display categories
 function populateCategoryDrop() {
     fetch("http://localhost:8083/api/categories")
-        .then(response = response.json())
+        .then(response => response.json())
         .then(categories => {
-            console.log(categories.name);
+            console.log(categories);
         })
 }
 //displays the level of urgency
