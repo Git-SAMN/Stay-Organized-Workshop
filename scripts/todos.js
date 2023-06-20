@@ -1,52 +1,79 @@
 "use strict";
-
+//------------------------------------------------------------------------------------------
 const userDropdown = document.getElementById("userDropdown");
 const userDetailsRow = document.getElementById("userDetailsRow");
 const addUserBtn = document.getElementById("addUserBtn");
-
-
+//------------------------------------------------------------------------------------------
 window.onload = function () {
-    userDataDisplay();
+    // userDataDisplay();
+    
     populateUserDropdown();
+    userDropdown.onchange = dropDownOnChange;
+
     hideUserDetailsRow();
-}
-//function shows the user Cards and data displayed once a drop down is chosen from the info of the API
-function userDataDisplay(){
-  let getElementValue = (id) => document.getElementById(id).value;
-
-let data = {
-  userid: getElementValue("user"),
-  category: getElementValue("category"),
-  description: getElementValue("description"),
-  deadline: getElementValue("deadline"),
-  priority: getElementValue("priority")
-};
-
-  fetch("http://localhost:8083/api/todos", {
-        method: "Post",
-        body: JSON.stringify(data),
-        headers: {
-            "content-type": "application/json; charset=UTF-8"
-
+  }
+  
+  function populateUserDropdown(){
+    console.log("selected user");
+  
+    fetch("http://localhost:8083/api/users")
+      .then(response => response.json())
+      .then(userName => {
+        for(let user of userName){
+          let option = document.createElement("option");
+          option.text = user.name;
+          option.value = user.id;
+          userDropdown.appendChild(option);
         }
-        
-    })
-    .catch(error => {
-      console.error("error",error)
-  })
+      })
+
+  }
+  //function shows the user Cards and data displayed once a drop down is chosen from the info of the API
+  function dropDownOnChange(){
+    let selectedUser = userDropdown.value;
+    const taskFilter = ___.filter(user => user.userid === selectedUser)
+    console.log(taskFilter);
+
+      userDetailsRow.innerHTML = "";
+
+    if (taskFilter.length > 0) {
+      for (let task of taskFilter) {
+        makeTaskCard(task);
+      }
+    }
+
+    let data = {
+        userid: document.getElementById("user").value,
+        category: document.getElementById("category").value,
+        description: document.getElementById("description").value,
+        deadline: document.getElementById("deadline").value,
+        priority: document.getElementById("priority").value,
+    };
+    
+      fetch("http://localhost:8083/api/todos", {
+            method: "Post",
+            body: JSON.stringify(data),
+            headers: {
+                "content-type": "application/json; charset=UTF-8"
+    
+            }
+            
+        })
+        .catch(error => {
+          console.error("error",error)
+      })
+
+  }
+//------------------------------------------------------------------------------------------
+  function userDataDisplay(){
+  
+  }
+
+//------------------------------------------------------------------------------------------
+function makeTaskCard(){
+
 
 }
-
-function populateUserDropdown(){
-  console.log("selected user");
-
-  fetch("http://localhost:8083/api/users")
-    .then(response = response.json())
-    .then(userName => {
-        console.log(userName.name);
-    })
-}
-
 
 //function for hiding user details before being chosen form the dropdown.
 function hideUserDetailsRow(){
