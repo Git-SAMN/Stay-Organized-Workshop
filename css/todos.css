@@ -1,0 +1,15 @@
+body {
+    background-color: rgb(93, 159, 182);
+  }
+  
+  h1 {
+    color: white;
+     text-align: center;
+     font-family: 'Permanent Marker', cursive;
+  }
+  
+  p {
+    font-family: 'Permanent Marker', cursive;
+    font-size: 20px;
+  }
+
