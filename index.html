@@ -1,15 +1,115 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Homepage</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/index.css">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Homepage</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/index.css">
+  <style>
+    /* Add custom CSS to position the content below the navbar */
+    body {
+      background-color: #f8f9fa;
+    }
 
-  </head>
+    .navbar {
+      background-color: #343a40;
+      color: #ffffff;
+    }
+
+    .navbar-brand {
+      font-weight: bold;
+      font-size: 1.5rem;
+      color: blue; /* Updated color to blue */
+    }
+
+    .navbar-nav .nav-link {
+      color: white; /* Updated color to white */
+      font-weight: bold;
+    }
+
+    .content {
+      margin-top: 80px;
+      background-color: #ffffff;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    .card {
+      margin-top: 20px;
+    }
+
+    .card-header {
+      background-color: #343a40;
+      color: #ffffff;
+    }
+
+    .form-group label {
+      font-weight: bold;
+    }
+
+    textarea.form-control {
+      resize: vertical;
+    }
+
+    .btn-primary {
+      background-color: #007bff;
+      border-color: #007bff;
+    }
+
+    .btn-primary:hover {
+      background-color: #0069d9;
+      border-color: #0062cc;
+    }
+
+    /* Custom styles for professional look */
+    .hero-section {
+      padding: 80px 0;
+      color: #ffffff;
+      background: linear-gradient(to bottom, #007bff, #ffffff);
+    }
+
+    .hero-section h1 {
+      font-size: 3rem;
+    }
+
+    .hero-section p {
+      font-size: 1.5rem;
+      margin-bottom: 0;
+    }
+
+    .feature-section {
+      padding: 40px 0;
+    }
+
+    .feature-card {
+      border: none;
+      background-color: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .feature-card .card-body {
+      padding: 20px;
+    }
+
+    footer {
+      background-color: #343a40;
+      color: #ffffff;
+      padding: 20px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
   <!---NavBar-->
-  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <nav class="navbar navbar-expand-lg">
     <div class="container-fluid">
       <a class="navbar-brand" href="index.html">SAMN Task Helper</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -17,25 +117,62 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
-          <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+          <a class="nav-link" aria-current="page" href="index.html">Home</a>
           <a class="nav-link" href="todos.html">Tasks To Be Done</a>
-          <a class="nav-link" href="new_todo.html">Add New Tasks</a>
+          <a class="nav-link" href="new_todo.html">New Tasks</a>
           <a class="nav-link" href="new_user.html">New User</a>
-
         </div>
       </div>
     </div>
   </nav>
   <!---Navbar End-->
-  <body>
-    <h1>SAMN Task Helper</h1>
 
-    <p>Welcome to SAMN Task Helper! Stay organized and achieve more with our powerful to-do list management system. Create, prioritize, and track tasks effortlessly. Categorize, set deadlines, and define priorities to stay on top. 
-        Join our community, unlock the power of efficient planning, and start organizing your life with SAMN TASK Helper today!
-    </p>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
-    <footer>
-        <p>© 2023 SAMN Incorporated</p>
-    </footer>
-  </body>
+  <section class="hero-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6">
+          <h1>SAMN Task Helper</h1>
+          <p>Welcome to SAMN Task Helper! Stay organized and achieve more with our powerful to-do list management system. Create, prioritize, and track tasks effortlessly. Categorize, set deadlines, and define priorities to stay on top.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="feature-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4">
+          <div class="card feature-card">
+            <div class="card-body">
+              <h5 class="card-title">Task Management</h5>
+              <p class="card-text">Effortlessly manage your tasks, set deadlines, and define priorities to stay on top of your to-do list.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="card feature-card">
+            <div class="card-body">
+              <h5 class="card-title">Efficient Planning</h5>
+              <p class="card-text">Categorize your tasks, set reminders, and unlock the power of efficient planning to stay organized and productive.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="card feature-card">
+            <div class="card-body">
+              <h5 class="card-title">Community</h5>
+              <p class="card-text">Join our community, share your experiences, and learn from others to enhance your productivity and achieve your goals.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2023 SAMN Incorporated</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+</body>
 </html>
