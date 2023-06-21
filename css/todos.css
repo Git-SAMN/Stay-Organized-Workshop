@@ -1,15 +1,83 @@
+
+
 body {
-    background-color: rgb(93, 159, 182);
+    background-color: #f8f9fa;
   }
-  
+
+  .navbar {
+    background-color: #343a40;
+    color: #ffffff;
+  }
+
+  .navbar-brand {
+    font-weight: bold;
+    font-size: 1.5rem;
+  }
+
+  .navbar-nav .nav-link {
+    color: #ffffff;
+    font-weight: bold;
+  }
+
+  .btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+  }
+
+  .btn-primary:hover {
+    background-color: #0069d9;
+    border-color: #0062cc;
+  }
+
   h1 {
-    color: white;
-     text-align: center;
-     font-family: 'Permanent Marker', cursive;
+    font-size: 2rem;
+    margin-bottom: 20px;
   }
-  
-  p {
-    font-family: 'Permanent Marker', cursive;
-    font-size: 20px;
+
+  .card {
+    margin-top: 20px;
   }
+  .card-header {
+    background-color: #343a40;
+    color: #ffffff;
+  }
+
+  .form-group label {
+    font-weight: bold;
+  }
+
+  textarea.form-control {
+    resize: vertical;
+  }
+
+  .btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+  }
+
+  .btn-primary:hover {
+    background-color: #0069d9;
+    border-color: #0062cc;
+  }
+
+#userDropdown {
+  width: 600px; 
+}
+
+
+#userDropdown {
+  height: 40px;
+}
+
+
+#addUserBtn {
+  padding: 10px 20px; 
+  font-size: 16px; 
+}
+
+
+#addUserBtn {
+  background-color: blue; 
+  color: white; 
+}
 
