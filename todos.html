@@ -11,7 +11,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
   </head>
     <!---NavBar-->
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
           <a class="navbar-brand" href="index.html">SAMN Task Helper</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -21,7 +21,6 @@
             <div class="navbar-nav">
               <a class="nav-link" aria-current="page" href="index.html">Home</a>
               <a class="nav-link active" href="todos.html">Tasks To Be Done</a>
-              <a class="nav-link" href="todo_details.html">Task Details</a>
               <a class="nav-link" href="new_todo.html">New Tasks</a>
               <a class="nav-link" href="new_user.html">New User</a>
 
@@ -31,24 +30,34 @@
       </nav>
       <!---Navbar End-->
   <body>
-    <h1>Tasks to Be Done!</h1>
+  
     <!---Page Allows User to View All Of the Todo Tasks For a Specific User-->
     <!---User is to be Picked From Dropdown-->
 
     <!---Dropdown for User Name-->
 
     <div class="username">
+      <div class="container mt-5">
+        <div class="card">
+          <div class="card-header">
+            <h1 class="card-title">Tasks to Be Done</h1>
+          </div>
         <form>
+          <div class="card">
+            <div class="card-body">
             <label for="userName">Select User:</label>
             <select id="userDropdown" name="username">
                 <option value=""selected disabled>Choose A User:</option>
             </select>
         </form>
     </div>
+    </div>
+    </div>
+    
 
     <!---Stretch Goal "ADD new user Button"-->
 
-    <button type="submit" id="addUserBtn" class="btn btn primary mt-4">Add A New User</button>
+    <button type="submit" id="addUserBtn" class="btn btn primary">Add A New User</button>
     
 
     <!--Container for Card That Shows ToDo Tasks-->
@@ -56,7 +65,7 @@
 
         <div id="userDetailsRow" class="row">
         </div>
-    </div>
+      </div>
     
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
