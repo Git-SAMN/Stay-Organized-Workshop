@@ -31,7 +31,7 @@ window.onload = function () {
   //function shows the user Cards and data displayed once a drop down is chosen from the info of the API
   function dropDownOnChange(){
     let selectedUser = userDropdown.value;
-    const taskFilter = ___.filter(user => user.userid === selectedUser)
+    const taskFilter = data.filter(user => user.userid === selectedUser)
     console.log(taskFilter);
 
       userDetailsRow.innerHTML = "";
@@ -65,15 +65,93 @@ window.onload = function () {
 
   }
 //------------------------------------------------------------------------------------------
-  function userDataDisplay(){
-  
-  }
+  // function userDataDisplay(){
+  //   let col = document.createElement("div");
+  //   col.className = "col-6 my-5";
+  //   userDetailsRow.appendChild(col);
+  //   //-----------------------CARD-------------------------------------------------------------
+  //   let card = document.createElement("div");
+  //   card.className = "card";
+  //   col.appendChild(card);
+  //   //-----------------------CARD BODY-------------------------------------------------------------
+  //   let cardBody = document.createElement("div");
+  //   cardBody.className = "card-body";
+  //   card.appendChild(cardBody);
+  //   //--------------------------H4-------------------------------------------------------------
+  //   let h4user = document.createElement("h4");
+  //   h4user.className = "card-title";
+  //   h4user.innerHTML = user.userid;
+  //   cardBody.appendChild(h4user);
+  //   //------------------------------------------------------------------------------------
+  //   let ulList = document.createElement("ul");
+  //   ulList.className = "ul";
+  //   h4user.appendChild(ulList);
+  //   //------------------------------------------------------------------------------------
+  //   let listCategory = document.createElement("li");
+  //   listCategory.className = "category";
+  //   listCategory.innerHTML = "Category: " + user.category;
+  //   ulList.appendChild(listCategory);
+  //   //------------------------------------------------------------------------------------
+  //   let listDescription = document.createElement("li");
+  //   listDescription.className = "description";
+  //   listDescription.innerHTML = "Description: " + user.description;
+  //   listCategory.appendChild(listDescription);
+  //   //------------------------------------------------------------------------------------
+  //   let listDeadline = document.createElement("li");
+  //   listDeadline.className = "deadline";
+  //   listDeadline.innerHTML = "Deadline: " + user.deadline;
+  //   listDescription.appendChild(listDeadline);
+  //   //------------------------------------------------------------------------------------
+  //   let listPriority = document.createElement("li");
+  //   listPriority.className = "Priority";
+  //   listPriority.innerHTML = "Priority: " + user.priority;
+  //   listDeadline.appendChild(listPriority);
+  // }
 
 //------------------------------------------------------------------------------------------
 function makeTaskCard(){
+  let col = document.createElement("div");
+    col.className = "col-6 my-5";
+    userDetailsRow.appendChild(col);
+    //-----------------------CARD-------------------------------------------------------------
+    let card = document.createElement("div");
+    card.className = "card";
+    col.appendChild(card);
+    //-----------------------CARD BODY-------------------------------------------------------------
+    let cardBody = document.createElement("div");
+    cardBody.className = "card-body";
+    card.appendChild(cardBody);
+    //--------------------------H4-------------------------------------------------------------
+    let h4user = document.createElement("h4");
+    h4user.className = "card-title";
+    h4user.innerHTML = user.userid;
+    cardBody.appendChild(h4user);
+    //------------------------------------------------------------------------------------
+    let ulList = document.createElement("ul");
+    ulList.className = "ul";
+    h4user.appendChild(ulList);
+    //------------------------------------------------------------------------------------
+    let listCategory = document.createElement("li");
+    listCategory.className = "category";
+    listCategory.innerHTML = "Category: " + user.category;
+    ulList.appendChild(listCategory);
+    //------------------------------------------------------------------------------------
+    let listDescription = document.createElement("li");
+    listDescription.className = "description";
+    listDescription.innerHTML = "Description: " + user.description;
+    listCategory.appendChild(listDescription);
+    //------------------------------------------------------------------------------------
+    let listDeadline = document.createElement("li");
+    listDeadline.className = "deadline";
+    listDeadline.innerHTML = "Deadline: " + user.deadline;
+    listDescription.appendChild(listDeadline);
+    //------------------------------------------------------------------------------------
+    let listPriority = document.createElement("li");
+    listPriority.className = "Priority";
+    listPriority.innerHTML = "Priority: " + user.priority;
+    listDeadline.appendChild(listPriority);
+  }
 
-
-}
 
 //function for hiding user details before being chosen form the dropdown.
 function hideUserDetailsRow(){
