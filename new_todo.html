@@ -93,16 +93,15 @@
             <div class="form-group">
               <label for="user">User:</label>
               <select class="form-control" id="user" name="user" required>
-                <option value="1">John</option>
-                <option value="2">Jane</option>
-                <option value="3">Alex</option>
+                <option value="-1">Please Pick A User</option>
+         
               </select>
             </div>
 
             <div class="form-group">
               <label for="category">Category:</label>
               <select class="form-control" id="category" name="category" required>
-                <!-- Options will be dynamically populated via JavaScript -->
+                <option value="-1">Please Select A Task</option>
               </select>
             </div>
 
@@ -119,13 +118,15 @@
             <div class="form-group">
               <label for="priority">Priority:</label>
               <select class="form-control" id="priority" name="priority" required>
+
+                <option value="-1">Pick A Priority Level</option>
                 <option value="Low">Low</option>
                 <option value="Medium">Medium</option>
                 <option value="High">High</option>
               </select>
             </div>
 
-            <button type="submit" class="btn btn-primary">Add Task</button>
+            <button type="submit" id="addBtn" class="btn btn-primary">Add Task</button>
           </form>
         </div>
       </div>
