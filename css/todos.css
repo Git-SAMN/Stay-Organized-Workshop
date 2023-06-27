@@ -1,15 +1,62 @@
 body {
-    background-color: rgb(93, 159, 182);
-  }
-  
-  h1 {
-    color: white;
-     text-align: center;
-     font-family: 'Permanent Marker', cursive;
-  }
-  
-  p {
-    font-family: 'Permanent Marker', cursive;
-    font-size: 20px;
-  }
-
+  background-color: #F8F9FA;
+}
+.navbar {
+  background-color: #343A40;
+  color: #FFFFFF;
+}
+.navbar-brand {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+.navbar-nav .nav-link {
+  color: #FFFFFF;
+  font-weight: bold;
+}
+.btn-primary {
+  background-color: #007BFF;
+  border-color: #007BFF;
+}
+.btn-primary:hover {
+  background-color: #0069D9;
+  border-color: #0062CC;
+}
+h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+.card {
+  margin-top: 20px;
+}
+.card-header {
+  background-color: #343A40;
+  color: #FFFFFF;
+}
+.form-group label {
+  font-weight: bold;
+}
+textarea.form-control {
+  resize: vertical;
+}
+.btn-primary {
+  background-color: #007BFF;
+  border-color: #007BFF;
+}
+.btn-primary:hover {
+  background-color: #0069D9;
+  border-color: #0062CC;
+}
+#userDropdown {
+width: 600px;
+}
+#userDropdown {
+height: 40px;
+}
+#addUserBtn {
+padding: 10px 20px;
+font-size: 16px;
+}
+#addUserBtn {
+background-color: blue;
+color: white;
+}
